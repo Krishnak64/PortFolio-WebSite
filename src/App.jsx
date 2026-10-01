@@ -107,7 +107,8 @@ export default function App() {
             <a className="btn solid" href={`mailto:${profile.email}`}>{profile.email}</a>
             <a className="btn" href={`tel:${profile.phone}`}>{profile.phone}</a>
           </div>
-          <p className="soc"><a href={profile.github} target="_blank" rel="noreferrer">GitHub</a><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a><a href={profile.leetcode} target="_blank" rel="noreferrer">LeetCode</a></p>
+          <p className="soc"><a href={profile.github} target="_blank" rel="noreferrer">GitHub</a><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a><a href={profile.leetcode} target="_blank" rel="noreferrer">LeetCode</a><a href={profile.gfg} target="_blank" rel="noreferrer">GeeksforGeeks</a></p>
+        </Section>
         </Section>
       </main>
       <footer className="wrap foot">© {new Date().getFullYear()} Krishna. Built with React.</footer>
