@@ -88,8 +88,3 @@ body{background:radial-gradient(800px 480px at 88% -5%,color-mix(in srgb,var(--a
 .card:hover::before,.resc:hover::before{opacity:1}
 .skills div{transition:transform .25s,border-color .25s}.skills div:hover{transform:translateY(-3px);border-left-color:var(--a2)}
 .tl li::before{background:linear-gradient(135deg,var(--a1),var(--a2));box-shadow:0 0 0 0 color-mix(in srgb,var(--a1) 60%,transparent);animation:pulse 2.4s infinite}
-<<<<<<< HEAD
-@supports (animation-timeline:view()){.card,.skills div,.tl li,.resc,.sec h2{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}.tl li::before{animation:pulse 2.4s infinite}}
-=======
-@supports (animation-timeline:view()){.card,.skills div,.tl li,.resc,.sec h2{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}.tl li::before{animation:pulse 2.4s infinite}}
->>>>>>> 32bdd1467784e08667befa01a8280fa08b053d0e
