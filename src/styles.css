@@ -1,5 +1,7 @@
-:root{color-scheme:dark;--bg:#0b1220;--surface:#141d33;--ink:#e8ecf6;--muted:#9aa6c0;--line:#27324e;--accent:#6f8bff;--accent-ink:#0b1220;--r:14px}
-:root[data-mode="ai"]{--accent:#3cc9b6}
+@property --a1{syntax:"<color>";inherits:true;initial-value:#5b8cff}
+@property --a2{syntax:"<color>";inherits:true;initial-value:#b061ff}
+:root{color-scheme:dark;--bg:#070b16;--surface:#0f1730;--ink:#eef1fb;--muted:#a3aecb;--line:#243052;--a1:#5b8cff;--a2:#b061ff;--accent:var(--a1);--accent-ink:#060a14;--r:16px;transition:--a1 .7s,--a2 .7s}
+:root[data-mode="ai"]{--a1:#22d3b6;--a2:#38a8ff}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "IBM Plex Sans",system-ui,sans-serif;transition:background .3s}
@@ -53,3 +55,37 @@ h1{font-weight:800;font-size:clamp(4.2rem,17vw,11rem);letter-spacing:-.04em}.dot
 .filters .act{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .more{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:22px}.more p{margin:0}.more .btn{background:none;color:var(--ink);cursor:pointer;font:500 1rem inherit}
 @media(max-width:760px){.more .btn{width:100%}}
+/* ---- Animated theme ---- */
+body{background:radial-gradient(800px 480px at 88% -5%,color-mix(in srgb,var(--a2) 20%,transparent),transparent 70%),radial-gradient(700px 520px at -8% 28%,color-mix(in srgb,var(--a1) 16%,transparent),transparent 70%),var(--bg);background-repeat:no-repeat}
+.logo,h1{background:linear-gradient(100deg,var(--ink) 15%,var(--a1) 45%,var(--a2) 70%,var(--ink) 95%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 7s linear infinite}
+.dot{-webkit-text-fill-color:var(--a2)}
+@keyframes shine{to{background-position:-220% 0}}
+@keyframes up{from{opacity:0;translate:0 26px}}
+@keyframes rise{from{opacity:0;translate:0 32px}}
+@keyframes blink{50%{opacity:0}}
+@keyframes scroll{to{translate:-50% 0}}
+@keyframes pulse{70%{box-shadow:0 0 0 12px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.hero{position:relative;isolation:isolate}
+.net{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse 80% 90% at 70% 35%,#000 25%,transparent 75%);mask-image:radial-gradient(ellipse 80% 90% at 70% 35%,#000 25%,transparent 75%)}
+.hero>*:not(.net){animation:up .8s cubic-bezier(.2,.7,.2,1) both}
+.hero>h1:not(.net){animation:up .8s cubic-bezier(.2,.7,.2,1) both,shine 7s linear infinite}
+.hero>:nth-child(3){animation-delay:.1s}.hero>:nth-child(4){animation-delay:.22s}.hero>:nth-child(5){animation-delay:.34s}.hero>:nth-child(6){animation-delay:.46s}.hero>:nth-child(7){animation-delay:.58s}
+.typed{font-size:1.15rem;color:var(--muted);margin:-12px 0 26px;min-height:1.6em}.typed span{color:var(--a1)}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--a1);margin-left:3px;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+.btn.solid,.tog .act,.filters .act,.chip.live{background:linear-gradient(120deg,var(--a1),var(--a2));border-color:transparent;color:var(--accent-ink)}
+.btn.solid:hover{box-shadow:0 10px 30px -8px var(--a1)}
+.stats dt{background:linear-gradient(120deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;width:fit-content}
+.marq{overflow:hidden;margin-top:34px;border-block:1px solid var(--line);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marq div{display:flex;gap:34px;width:max-content;padding:14px 0;animation:scroll 34s linear infinite}.marq:hover div{animation-play-state:paused}
+.marq span{color:var(--muted);font:500 1rem "Bricolage Grotesque",sans-serif;white-space:nowrap}
+.marq span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--a1);margin-right:12px;vertical-align:middle}
+.sec h2::after{content:"";display:block;width:56px;height:4px;margin-top:10px;border-radius:4px;background:linear-gradient(90deg,var(--a1),var(--a2))}
+.card,.resc,.skills div{position:relative;overflow:hidden}
+.card{background:linear-gradient(165deg,color-mix(in srgb,var(--surface) 88%,var(--a1)),var(--surface));transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-5px);border-color:var(--a1);box-shadow:0 24px 50px -24px color-mix(in srgb,var(--a1) 60%,transparent)}
+.card.feat{border-color:var(--a1);box-shadow:0 30px 80px -40px color-mix(in srgb,var(--a1) 70%,transparent)}.card.feat:hover{transform:none}
+.card::before,.resc::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--a1) 20%,transparent),transparent 65%)}
+.card:hover::before,.resc:hover::before{opacity:1}
+.skills div{transition:transform .25s,border-color .25s}.skills div:hover{transform:translateY(-3px);border-left-color:var(--a2)}
+.tl li::before{background:linear-gradient(135deg,var(--a1),var(--a2));box-shadow:0 0 0 0 color-mix(in srgb,var(--a1) 60%,transparent);animation:pulse 2.4s infinite}
+@supports (animation-timeline:view()){.card,.skills div,.tl li,.resc,.sec h2{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}.tl li::before{animation:pulse 2.4s infinite}}
