@@ -17,12 +17,12 @@ export const modes = {
 export const skills = {
   fs: [["Languages", "Java, JavaScript, Python"], ["Frontend", "React.js, Redux Toolkit, React Router, Tailwind CSS, Bootstrap, HTML5, CSS3, EJS"],
     ["Backend", "Node.js, Express.js, REST APIs, Socket.IO, JWT, bcrypt"], ["Databases", "MongoDB, MongoDB Atlas, SQL, MySQL, Redis"],
-    ["Tools", "Git, GitHub, Docker, CI/CD, Render, Vercel, AWS, Postman, Cloudinary, Firebase, Stripe"],
+    ["Tools", "Git, GitHub, Docker, CI/CD, Render, Vercel, Netlify, AWS, Postman, Cloudinary, Firebase, Stripe"],
     ["Core", "DSA (350+ solved), OOP, System design basics"]],
   ai: [["Languages", "Python, Java"], ["GenAI", "LangChain, LangGraph, RAG, Embeddings, Vector DBs (Qdrant), OpenRouter, Groq API"],
     ["ML & Vision", "TensorFlow, PyTorch, Scikit-learn, Reinforcement Learning (DQN), PyTorch Geometric (GNNs), OpenCV, MediaPipe, dlib, face_recognition"],
     ["Data Science", "Pandas, NumPy, Statistics, EDA, Feature Engineering, Data Visualization (Matplotlib, Seaborn)"],
-    ["Serving & Deployment", "FastAPI, Flask, Streamlit, Streamlit Cloud, Render, Docker, CI/CD, AWS, WebRTC"],
+    ["Serving & Deployment", "FastAPI, Flask, Streamlit, Render, Docker, CI/CD, AWS, WebRTC"],
     ["Data stores", "SQL, MySQL, MongoDB, Qdrant, Redis, Supabase"]],
 };
 export const experience = [
