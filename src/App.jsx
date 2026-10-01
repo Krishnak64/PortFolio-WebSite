@@ -203,3 +203,4 @@ function Network() {
     return () => { cancelAnimationFrame(raf); window.removeEventListener("resize", resize); window.removeEventListener("pointermove", move); };
   }, []);
   return <canvas ref={ref} className="net" aria-hidden="true" />;
+}
