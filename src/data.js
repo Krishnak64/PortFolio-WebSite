@@ -44,7 +44,7 @@ export const projects = [
     blurb: "Turn any topic into clear, exam-ready notes in seconds. Enter a subject and Google Gemini generates structured, easy-to-revise notes; Stripe unlocks premium usage.",
     features: ["AI-generated, well-structured notes powered by Google Gemini", "Stripe payments for credits and premium access", "Secure sign up and log in", "Topic-based generation for any subject", "Responsive on desktop, tablet and mobile", "Separate client and server, deployed on Render"],
     stack: ["React", "JavaScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Google Gemini API", "Stripe", "Render"], repo: "https://github.com/Krishnak64/ExamNotesAI" },
-  { id: "gym", tags: ["ai"], name: "Real-Time AI Gym Coach", live: "https://github.com/Krishnak64/AI-Realtime-GYM-Coach-LandingPage",
+  { id: "gym", tags: ["ai"], name: "Real-Time AI Gym Coach", live: "https://ai-gym-coach-live.netlify.app/",
     blurb: "Webcam-based coach that counts reps, checks posture and talks you through the workout.",
     features: ["MediaPipe tracks 33 body landmarks live", "Groq LLM gives form corrections and motivation", "gTTS voice guidance, hands-free", "Streamlit UI, WebRTC video, Pandas session tracking"],
     stack: ["Python", "OpenCV", "MediaPipe", "Streamlit", "WebRTC", "Groq", "gTTS"], repo: "https://github.com/Krishnak64/RealTime-Voice-Video-AI-GYM-Trainer-Mediapipe" },
