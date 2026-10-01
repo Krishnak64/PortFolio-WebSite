@@ -1,6 +1,5 @@
-:root{--bg:#eef1f6;--surface:#fff;--ink:#14213d;--muted:#56627a;--line:#d5dbe7;--accent:#2b50ff;--accent-ink:#fff;--r:14px}
-:root[data-mode="ai"]{--accent:#0b8f80}
-@media(prefers-color-scheme:dark){:root{--bg:#0f1626;--surface:#172138;--ink:#e8ecf6;--muted:#9aa6c0;--line:#2a3654;--accent:#6f8bff}:root[data-mode="ai"]{--accent:#3cc9b6}:root{--accent-ink:#0f1626}}
+:root{color-scheme:dark;--bg:#0b1220;--surface:#141d33;--ink:#e8ecf6;--muted:#9aa6c0;--line:#27324e;--accent:#6f8bff;--accent-ink:#0b1220;--r:14px}
+:root[data-mode="ai"]{--accent:#3cc9b6}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "IBM Plex Sans",system-ui,sans-serif;transition:background .3s}
@@ -38,8 +37,7 @@ h1{font-weight:800;font-size:clamp(4.2rem,17vw,11rem);letter-spacing:-.04em}.dot
 .feat{grid-column:1/-1;border:2px solid var(--accent);padding:clamp(20px,4vw,34px)}.feat h3{font-size:clamp(1.7rem,4vw,2.4rem)}
 .card ul{margin:4px 0;padding-left:20px;color:var(--muted);font-size:.95rem}.card ul.two{columns:2 280px;column-gap:32px}.card li{margin-bottom:4px;break-inside:avoid}
 .chips{display:flex;flex-wrap:wrap;gap:6px}.chip{font-size:.75rem;padding:2px 10px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
-.chip.fs{border-color:#2b50ff;color:#2b50ff}.chip.ai{border-color:#0b8f80;color:#0b8f80}.chip.live{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-@media(prefers-color-scheme:dark){.chip.fs{border-color:#6f8bff;color:#6f8bff}.chip.ai{border-color:#3cc9b6;color:#3cc9b6}}
+.chip.fs{border-color:#6f8bff;color:#6f8bff}.chip.ai{border-color:#3cc9b6;color:#3cc9b6}.chip.live{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .stack{font-size:.85rem;color:var(--muted);margin-top:auto!important;padding-top:6px}
 .row{display:flex;flex-wrap:wrap;gap:16px}.link{background:none;border:0;padding:0;font:500 .92rem inherit;color:var(--accent);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .res{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:20px}
