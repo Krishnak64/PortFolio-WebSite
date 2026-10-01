@@ -12,7 +12,8 @@ A responsive developer portfolio for a **Full Stack Developer** and **AI/ML Engi
 - **Resume downloads:** two role-specific PDFs (Full Stack and AI/ML).
 - **Skills and experience:** skills grouped by role, plus an internship timeline.
 - **Responsive:** works on phones, tablets and desktops.
-- **Dark mode:** follows the system theme, and respects reduced-motion settings.
+- **Animated hero:** an interactive particle network that follows the cursor, a typing headline, animated stat counters and a scrolling tech ticker.
+- **Dark theme:** a dark interface that respects reduced-motion settings.
 
 ## Tech Stack
 
