@@ -100,4 +100,4 @@ Every push to `main` triggers a new deploy.
 
 - Email: krishnakumar.tech7@gmail.com
 - GitHub: [Krishnak64](https://github.com/Krishnak64)
-- Live site: [krishnaportfolio.com](https://krishnaportfolio.com)
+- Live site: [krishnaportfolio.com](https://krishnatechportfolio.netlify.app/)
