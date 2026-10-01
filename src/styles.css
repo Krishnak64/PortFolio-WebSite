@@ -1,0 +1,57 @@
+:root{--bg:#eef1f6;--surface:#fff;--ink:#14213d;--muted:#56627a;--line:#d5dbe7;--accent:#2b50ff;--accent-ink:#fff;--r:14px}
+:root[data-mode="ai"]{--accent:#0b8f80}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1626;--surface:#172138;--ink:#e8ecf6;--muted:#9aa6c0;--line:#2a3654;--accent:#6f8bff}:root[data-mode="ai"]{--accent:#3cc9b6}:root{--accent-ink:#0f1626}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "IBM Plex Sans",system-ui,sans-serif;transition:background .3s}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:20px;padding:12px 20px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo{font:800 1.25rem "Bricolage Grotesque";text-decoration:none}
+.bar nav{display:flex;gap:18px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.bar nav a{text-decoration:none;color:var(--muted);font-size:.92rem;text-transform:capitalize}.bar nav a:hover{color:var(--ink)}
+.tog{display:flex;padding:3px;border:1px solid var(--line);border-radius:99px;background:var(--surface);flex-shrink:0}
+.tog button{border:0;background:none;color:var(--muted);font:500 .85rem inherit;padding:6px 14px;border-radius:99px;cursor:pointer;transition:background .25s,color .25s}
+.tog .act{background:var(--accent);color:var(--accent-ink)}
+.hero{padding-top:clamp(48px,10vw,110px);padding-bottom:40px}
+.meta{color:var(--muted);margin:0 0 8px}
+h1{font-weight:800;font-size:clamp(4.2rem,17vw,11rem);letter-spacing:-.04em}.dot{color:var(--accent)}
+.line{font:500 clamp(1.4rem,3.6vw,2.2rem)/1.25 "Bricolage Grotesque";max-width:22ch;margin:16px 0 28px;animation:in .5s}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;border:1.5px solid var(--ink);text-decoration:none;font-weight:500;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn.solid{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:56px 0 0;padding-top:24px;border-top:1px solid var(--line)}
+.stats dt{font:800 clamp(1.8rem,5vw,3rem)/1 "Bricolage Grotesque"}.stats dd{margin:6px 0 0;color:var(--muted);font-size:.9rem}
+.sec{padding-top:72px;padding-bottom:8px}.sec h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:24px;letter-spacing:-.02em}
+.lead{font-size:1.2rem;max-width:62ch}.muted{color:var(--muted);max-width:62ch}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.skills div{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--r);padding:16px 18px}
+.skills h3{font-size:1.05rem;margin-bottom:6px}.skills p{margin:0;color:var(--muted);font-size:.95rem}
+.tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 28px}.tl li::before{content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.when{font-size:.85rem;color:var(--muted)}.tl h3{font-size:1.35rem;margin:2px 0}.org{margin:0 0 6px;font-weight:500;color:var(--accent)}.tl p{max-width:62ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:10px;transition:opacity .3s}
+.card.dim{opacity:.72}.card h3{font-size:1.4rem}.card p{margin:0}
+.feat{grid-column:1/-1;border:2px solid var(--accent);padding:clamp(20px,4vw,34px)}.feat h3{font-size:clamp(1.7rem,4vw,2.4rem)}
+.card ul{margin:4px 0;padding-left:20px;color:var(--muted);font-size:.95rem}.card ul.two{columns:2 280px;column-gap:32px}.card li{margin-bottom:4px;break-inside:avoid}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{font-size:.75rem;padding:2px 10px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.chip.fs{border-color:#2b50ff;color:#2b50ff}.chip.ai{border-color:#0b8f80;color:#0b8f80}.chip.live{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+@media(prefers-color-scheme:dark){.chip.fs{border-color:#6f8bff;color:#6f8bff}.chip.ai{border-color:#3cc9b6;color:#3cc9b6}}
+.stack{font-size:.85rem;color:var(--muted);margin-top:auto!important;padding-top:6px}
+.row{display:flex;flex-wrap:wrap;gap:16px}.link{background:none;border:0;padding:0;font:500 .92rem inherit;color:var(--accent);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:20px}
+.resc{display:flex;flex-direction:column;gap:6px;padding:22px;border-radius:var(--r);background:var(--surface);border:1.5px solid var(--line);text-decoration:none;transition:border-color .2s,transform .15s}
+.resc:hover{transform:translateY(-3px);border-color:var(--accent)}.resc.on{border-color:var(--accent)}
+.resc strong{font:800 1.4rem "Bricolage Grotesque"}.resc span{color:var(--muted)}.resc em{margin-top:8px;font-style:normal;font-weight:500;color:var(--accent)}
+.soc{display:flex;gap:20px;margin-top:24px}.soc a{color:var(--accent)}
+.foot{padding-top:64px;padding-bottom:32px;color:var(--muted);font-size:.9rem}
+@media(max-width:760px){.bar{flex-wrap:wrap;gap:8px 12px}.bar nav{order:3;width:100%;margin:0}.tog{margin-left:auto}.stats{gap:10px}.btn{width:100%;text-align:center}}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.filters button{border:1.5px solid var(--line);background:var(--surface);color:var(--muted);font:500 .9rem inherit;padding:7px 16px;border-radius:99px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.filters button span{opacity:.7;margin-left:4px}
+.filters .act{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.more{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:22px}.more p{margin:0}.more .btn{background:none;color:var(--ink);cursor:pointer;font:500 1rem inherit}
+@media(max-width:760px){.more .btn{width:100%}}
