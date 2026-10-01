@@ -32,7 +32,7 @@ export const experience = [
     text: "4-week industry-backed program on Foundations of AI: ML concepts and real-world application development with mentors and peers." },
 ];
 export const projects = [
-  { id: "cortex", featured: true,  tags: ["fs", "ai"], name: "CORTEX AI — Multi-Agent Platform", live: "https://github.com/Krishnak64/Multi-Agent-AI-Platform-CortexAI-"
+  { id: "cortex", featured: true,  tags: ["fs", "ai"], name: "CORTEX AI — Multi-Agent Platform", live: "https://github.com/Krishnak64/Multi-Agent-AI-Platform-CortexAI-",
     blurb: "A production-ready multi-agent AI platform on the MERN stack with a microservices architecture. One prompt goes in, a router agent picks the right specialised agent, and the answer streams back.",
     features: ["8 specialised agents behind one router", "LangGraph routing and state management", "RAG: chat with your own PDFs using Qdrant", "Token-by-token streaming responses", "AI tool calling for external tools", "Microservices behind an API gateway", "JWT authentication", "Redis caching for speed and lower cost", "File upload and document processing", "Dockerized: one command runs everything", "Scalable folder structure, clean code"],
     stack: ["React.js", "Redux Toolkit", "Node.js", "Express.js", "LangGraph", "LangChain", "RAG", "MongoDB", "Qdrant", "Redis", "Docker"], repo: "https://github.com/Krishnak64/Multi-Agent-AI-Platform-CortexAI-" },
