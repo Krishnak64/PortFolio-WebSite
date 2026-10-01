@@ -35,7 +35,7 @@ export const projects = [
   { id: "cortex", featured: true, readmeDemo: true, tags: ["fs", "ai"], name: "CORTEX AI — Multi-Agent Platform",
     blurb: "A production-ready multi-agent AI platform on the MERN stack with a microservices architecture. One prompt goes in, a router agent picks the right specialised agent, and the answer streams back.",
     features: ["8 specialised agents behind one router", "LangGraph routing and state management", "RAG: chat with your own PDFs using Qdrant", "Token-by-token streaming responses", "AI tool calling for external tools", "Microservices behind an API gateway", "JWT authentication", "Redis caching for speed and lower cost", "File upload and document processing", "Dockerized: one command runs everything", "Scalable folder structure, clean code"],
-    stack: ["React.js", "Redux Toolkit", "Node.js", "Express.js", "LangGraph", "LangChain", "RAG", "MongoDB", "Qdrant", "Redis", "Docker"], repo: "https://github.com/krishnak64" },
+    stack: ["React.js", "Redux Toolkit", "Node.js", "Express.js", "LangGraph", "LangChain", "RAG", "MongoDB", "Qdrant", "Redis", "Docker"], repo: "https://github.com/Krishnak64/Multi-Agent-AI-Platform-CortexAI-" },
   { id: "builder", tags: ["fs", "ai"], name: "MERN AI Website Builder", live: true,
     blurb: "Describe a website in plain language and get working code you can edit in the browser.",
     features: ["OpenRouter API for code generation", "Monaco Editor for in-browser editing", "Firebase auth and storage, Stripe payments", "Express REST APIs, MongoDB schemas, deployed on Render"],
