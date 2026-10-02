@@ -88,3 +88,11 @@ body{background:radial-gradient(800px 480px at 88% -5%,color-mix(in srgb,var(--a
 .card:hover::before,.resc:hover::before{opacity:1}
 .skills div{transition:transform .25s,border-color .25s}.skills div:hover{transform:translateY(-3px);border-left-color:var(--a2)}
 .tl li::before{background:linear-gradient(135deg,var(--a1),var(--a2));box-shadow:0 0 0 0 color-mix(in srgb,var(--a1) 60%,transparent);animation:pulse 2.4s infinite}
+/* ---- Video demo ---- */
+.vid{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin:6px 0}
+.vid-btn{display:flex;align-items:center;gap:14px;width:100%;max-width:504px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--surface) 70%,transparent);color:var(--ink);cursor:pointer;font:500 1rem "IBM Plex Sans",system-ui,sans-serif;transition:border-color .2s}
+.vid-btn:hover{border-color:var(--a1)}
+.play{width:36px;height:36px;border-radius:50%;background:var(--a1);position:relative;flex-shrink:0}
+.play::after{content:"";position:absolute;left:14px;top:10px;border-left:12px solid var(--accent-ink);border-top:8px solid transparent;border-bottom:8px solid transparent}
+.vid-frame{width:100%;max-width:504px;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.vid-frame iframe{display:block;width:100%;height:555px;border:0}

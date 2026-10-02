@@ -75,11 +75,13 @@ export default function App() {
                 <h3>{p.name}</h3>
                 <p>{p.blurb}</p>
                 {isOpen && <ul className={p.featured ? "two" : ""}>{p.features.map(f => <li key={f}>{f}</li>)}</ul>}
+                {p.videoEmbed && <Video src={p.videoEmbed} name={p.name} />}
                 {p.readmeDemo && <p className="muted">Video demo: available in the project README on GitHub.</p>}
                 <p className="stack">{p.stack.join(", ")}</p>
                 <div className="row">
                   {!p.featured && <button className="link" aria-expanded={isOpen} onClick={() => setOpen(open === p.id ? null : p.id)}>{isOpen ? "Hide details" : "Show details"}</button>}
                   {p.readmeDemo && <a className="link" href={p.repo + "#readme"} target="_blank" rel="noreferrer">Watch video demo (in README)</a>}
+                  {p.post && <a className="link" href={p.post} target="_blank" rel="noreferrer">LinkedIn post</a>}
                   {typeof p.live === "string" && <a className="link" href={p.live} target="_blank" rel="noreferrer">Live demo</a>}
                   {p.demo && <a className="link" href={p.demo} target="_blank" rel="noreferrer">Streamlit demo</a>}
                   <a className="link" href={p.repo} target="_blank" rel="noreferrer">View code on GitHub</a>
@@ -203,4 +205,16 @@ function Network() {
     return () => { cancelAnimationFrame(raf); window.removeEventListener("resize", resize); window.removeEventListener("pointermove", move); };
   }, []);
   return <canvas ref={ref} className="net" aria-hidden="true" />;
+}
+
+function Video({ src, name }) {
+  const [on, setOn] = useState(false);
+  return (
+    <div className="vid">
+      {on
+        ? <div className="vid-frame"><iframe src={src} title={`${name} video demo on LinkedIn`} loading="lazy" allowFullScreen /></div>
+        : <button className="vid-btn" onClick={() => setOn(true)}><i className="play" aria-hidden="true" /><span>Watch the video demo</span></button>}
+      <a className="link" href={src.replace("/embed", "").replace("?collapsed=1", "")} target="_blank" rel="noreferrer">Open the post on LinkedIn</a>
+    </div>
+  );
 }
