@@ -55,7 +55,7 @@ export const projects = [
   { id: "videoassistant", videoEmbed: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7495212390024896512?collapsed=1", tags: ["ai"], name: "AI Video Assistant — Long Videos into Actionable Insights",
     blurb: "A generative AI assistant that turns long meetings, lectures, interviews and YouTube videos into something you can quickly understand and interact with, instead of watching for hours.",
     features: ["Audio and video transcription: converts speech into text", "AI summarization: concise summaries of long content", "Action items: extracts tasks that need to be completed", "Key decisions: identifies important decisions from the conversation", "Open questions: finds questions that were left unanswered", "Works with YouTube links and local video files"],
-    stack: ["Python", "Generative AI / LLMs", "LangChain", "RAG", "Vector Search", "Speech-to-Text", "Prompt Engineering"], repo: "https://github.com/Krishnak64" },
+    stack: ["Python", "Generative AI / LLMs", "LangChain", "RAG", "Vector Search", "Speech-to-Text", "Prompt Engineering"], repo: "https://github.com/Krishnak64/AI-Video-Assistant" },
   { id: "flappybird", tags: ["ai"], name: "Flappy Bird AI — Deep Reinforcement Learning",
     blurb: "An intelligent Flappy Bird agent trained using Deep Q-Networks (DQN) that learns optimal actions through rewards, penalties, and continuous interaction with the game environment.",
     features: ["Deep Q-Network (DQN) based decision making", "Experience Replay for stable training", "Epsilon-Greedy exploration strategy", "Reward and penalty based learning", "Neural network based Q-value prediction", "Continuous environment interaction", "Progressive improvement through reinforcement learning"],
